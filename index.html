@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BST Visualization</title>
+    <link rel="shortcut icon" href="img/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.0/css/bootstrap-slider.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+    
+<body>
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">   
+            <div class="navbar-brand">
+                 <p>Binary Search Tree Visualization</p>
+            </div>
+                
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="https://github.com/sunnysakura13" target="_blank">
+                        <img class="github-icon" src="img/github-icon.png">Sunny Ruan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <svg xmlns="http://www.w3.org/2000/svg" id="svg" class="svg" shape-rendering="auto"></svg>
+
+    <div class="container-fluid sidebar">
+        
+        <div class="row-offcanvas row-offcanvas-left">
+            
+            <div class="sidebar-offcanvas" id="sidebar">
+                
+              <div class="list-group">
+            
+                <div class="list-group-item">
+                    <form class="form-inline" id="addNodeForm" role="form">
+                        <div class="form-group">
+                            <label for="addNode">Add node: </label>
+                            <input type="number" class="form-control" id="addNode">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+                  
+                <div class="list-group-item">
+                    <form class="form-inline" id="searchForNodeForm" role="form">
+                        <div class="form-group">
+                            <label for="searchForNode">Search node: </label>
+                            <input type="number" class="form-control" id="searchForNode">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+                  
+                <div class="list-group-item">
+                    <form class="form-inline" id="deleteNodeForm" role="form">
+                        <div class="form-group">
+                            <label for="deleteNode">Delete node: </label>
+                            <input type="number" class="form-control" id="deleteNode">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+                  
+                <div class="list-group-item">
+                    <form class="form-inline" id="addRandomForm" role="form">
+                        <div class="form-group">
+                            <label for="addRandom"># of random nodes to add: </label>
+                            <input type="number" class="form-control" id="addRandom" data-toggle="popover" data-trigger="hover" 
+                                data-content="Random nodes between 0 and 500 will be added.">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+                  
+                <div class="list-group-item">
+                    <form class="form-inline" id="animationSpeedForm" role="form">
+                        <div class="form-group">
+                            <label for="AnimationSpeed">Slow</label>
+                            <input type="range" id="animationSpeed" data-silder-id="animationSpeedSlider" data-slider-min="0.1" data-slider-max="5.1" data-slider-step="0.1" data-slider-value="1"/>
+                            <label for="AnimationSpeed">Fast</label>
+                        </div>
+                    </form>
+                </div>
+                  
+                <div class="list-group-item">
+                    <form class="form-inline" id="resetZoom" role="form">
+                        <button type="submit" class="btn btn-default" onclick="resetPage()">Reset</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+            
+            <button type="button" class="btn btn-primary btn-xs btn-toggle" data-toggle="offcanvas">
+            <img class="toggle-icon" src="img/toggle.png"></button>
+            
+        </div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.0/bootstrap-slider.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    
+    <script src="js/bstvisual.js"></script>
+    <script>
+        //Refresh the page, clear the tree
+        function resetPage() {
+            location.reload();
+        }
+        
+        $(document).ready(function () {
+            $('[data-toggle=offcanvas]').click(function () {
+                $('.row-offcanvas').toggleClass('active');
+            });
+            $('#addRandom').popover({placement:'bottom'});
+        });
+    </script>
+
+
+</body>
+
+</html>

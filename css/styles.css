@@ -1,0 +1,215 @@
+html,
+body {
+    overflow-x: hidden; 
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    background-color: #eaf9fc;
+}
+
+.navbar {
+    background-color: #002766;
+}
+
+p {
+    font-size: 30px;
+    color: white;
+}
+
+.navbar-brand {
+    margin-top: 5px;
+}
+
+.sidebar {
+	padding-top: 15px;
+    padding-left: 0;
+}
+
+.github-icon {
+    padding-right: 5px;
+    font-size: 10px;
+}
+
+.list-group, .btn {
+	border-radius: 4px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+	background-color: #bcddff;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: aliceblue;
+}
+
+.toggle-icon {
+    width: 60%;
+}
+
+.btn-toggle {
+    width: 45px;
+    height: 45px;
+    border-color: #bcddff;
+    padding-left: 0;
+}
+
+#addRandomForm .popover {
+    width: 20em;
+}
+
+.svg {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.svg .nodeLine {
+    stroke: #000;
+    stroke-width: 2;
+}
+
+text {
+    text-anchor: middle;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #d9d9d9;
+}
+
+.navbar-inverse .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus {
+    background-color: transparent;
+    color: #d9d9d9;
+}   
+
+#animationSpeed {
+    display: none;
+}
+
+#animationSpeedForm  label {
+    margin-right: 2px;
+}
+
+#animationSpeedForm .slider-selection {
+  background: #d8d8d8;
+}
+
+.slider.slider-horizontal {
+  width: 205px;
+}
+
+@media screen and (min-width: 1000px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+       -moz-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-left {
+    left: 385px;
+  }
+
+  .row-offcanvas-left .sidebar-offcanvas {
+    left: -385px;
+  }
+
+  .row-offcanvas-left.active {
+    left: 0;
+  }
+
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 370px;
+  }
+
+
+  #addNode {
+    width: 13em;
+  }
+
+  #searchForNode {
+    width: 11.6em;
+  }
+
+  #deleteNode {
+    width: 12em;
+  }
+
+  #addRandom {
+    width: 12em;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -270px;
+  }
+
+  .row-offcanvas-left.active {
+    left: 270px;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 250px;
+  }
+
+  .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .form-inline .form-control {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #addNode {
+    width: 4.8em;
+  }
+
+  #searchForNode {
+    width: 4.8em;
+    margin-top: -1.3em;
+    margin-left: 0.2em;
+  }
+
+  #deleteNode {
+    width: 3.75em;
+  }
+
+  #searchForNodeForm > div > label {
+    width: 5em;
+  }
+
+  #addRandom {
+    width: 5.15em;
+    margin-top: -1.8em;
+  }
+
+  #addRandomForm > div > label {
+    width: 10em;
+  }
+}
